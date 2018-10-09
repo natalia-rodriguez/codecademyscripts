@@ -4,6 +4,6 @@ Once you have that installed, you can get started:
 
 1. Clone the `Codecademy-content` repo and navigate to the folder belonging to the lesson you wish to stitch!
 2. Download and place the `lesson_stitch.py` file inside that very directory
-3. Inside the `lesson_stitch.py` edit the string inside `lesson_yaml` variable to reflect the lesson's file name! 
+3. Inside the `lesson_stitch.py` edit the `lesson_yaml` variable to reflect the lesson's file name! 
 4. Run the `lesson_stitch.py`file
 5. The stitched lesson should be inside `stitched_exercises.txt` in that very folder! Enjoy:)
