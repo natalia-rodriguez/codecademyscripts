@@ -1,7 +1,7 @@
 import yaml
 
 # Change to the lesson file name below:
-lesson_yaml = 'tables.en.yml';
+lesson_yaml = 'what-is-vue.en.yml';
 with open(lesson_yaml, 'r') as f:
 	docs = yaml.load_all(f)
 	for doc in docs:
@@ -17,10 +17,12 @@ with open('stitched_exercises.txt', 'w') as outfile:
 			for doc in docs:
 				if 'components' in doc:
 					outfile.write('Narrative:\n')
-					narrative = doc['components'][2]['content']
-					outfile.write(narrative+'\n')
-					if 'instructions' in doc['components'][2]:
-						instructions = doc['components'][2]['instructions']
-						outfile.write('instructions:\n')
-						outfile.write(instructions+'\n')
+					for obj in doc['components']:
+						if 'content' in obj:
+							narrative = obj['content']
+							outfile.write(narrative+'\n')
+						if 'instructions' in obj:
+							instructions = obj['instructions']
+							outfile.write('instructions:\n')
+							outfile.write(instructions+'\n')
 					
